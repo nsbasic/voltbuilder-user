@@ -28,6 +28,7 @@ The build service is running with a [simple front end](http://99.237.86.51:22894
 *   You can use the same signing keys as with PhoneGap Build
 *   As with PhoneGap, you do not need to install Xcode, Android Studio or anything else for it to work.
 *   As with PhoneGap, you can use a Windows or Mac computer.
+*   VoltBuilder is designed to be Cordova first. Where different than PhoneGap, Cordova specs prevail. Friendly messages help with any changes.
 
 **Project Structure**
 
