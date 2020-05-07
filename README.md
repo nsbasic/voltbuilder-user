@@ -20,11 +20,11 @@ The build service is running with a [simple front end](http://99.237.86.51:22894
 
 **VoltBuilder compared to PhoneGap Build**
 
-*   Builds are made using XCode 11.4, so apps meet iTunes Connect requirements
+*   Builds are made using XCode 11.4, so apps meet latest iTunes Connect requirements
 *   Signing keys are uploaded with the app and deleted as soon as the build is complete. They are not stored on the VoltBuilder site.
 *   Build times can be faster
-*   Builds are sometimes smaller
-*   VoltBuilder uses the latest Cordova and XCode
+*   Builds can be smaller
+*   VoltBuilder uses the latest versions of Cordova and XCode
 *   You can use the same signing keys as with PhoneGap Build
 *   As with PhoneGap, you do not need to install Xcode, Android Studio or anything else for it to work.
 *   As with PhoneGap, you can use a Windows or Mac computer.
@@ -85,8 +85,8 @@ voltbuilder.json: This file which information about the build. Here’s how it l
 
 **Notes**:
 
-*   “iosPackageType” can be “ad-hoc”, “app-store” or “enterprise”
-*   “platform” can be “ios” or “android”
-*   “release” can be “debug” or “release”
-*   “serial” identified you to VoltBuilder. We will be giving you a serial number for beta testing.
+*   `iosPackageType` can be `ad-hoc`, `app-store` or `enterprise`
+*   `platform` can be `ios` or `android`
+*   `release` can be `debug` or `release`
+*   `serial` identified you to VoltBuilder. We will be giving you a serial number for beta testing.
 *   The test server does not support HTTPS yet. You will not be able to download .ipa files directly to iOS devices. If you save them to your own https enabled server, they should work.
