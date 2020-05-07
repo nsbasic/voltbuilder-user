@@ -1,0 +1,292 @@
+@media (prefers-color-scheme: light) {html {background: white; color: black;}}
+@media (prefers-color-scheme: dark) {html {background: black; color: white;}}
+@page { size: auto; }
+
+.dialog-overlay {
+      background-color: black;
+      opacity: 0.55;
+      -moz-opacity: .55;
+      filter: alpha(opacity=55);
+      position:fixed;
+      height: 100%;
+      width: 100%;
+   }
+.dialog-wrapper {
+      font-family: roboto, helvetica, verdana, arial;
+      font-size: 18px;
+      color: white;
+      opacity: 1.0;
+      -moz-opacity: 1.0;
+      filter: none;
+      width: 282px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+.dialog-header {
+      background: white;
+      border-radius: 0px;
+      border-top: 0px; 
+      border-left: 1px solid #dcdcdc;
+      border-right: 0px;
+      border-bottom: 2px solid;
+      padding: 20px 16px 16px 16px;
+      font-size: 22px;
+      font-weight: normal;
+      text-shadow:none;
+      color: #007AFF; /* android holo blue */
+      /* display: none */ /* disables the header section of the NSB.MsgBox */
+  }
+.dialog-content {
+      background: white;
+      border-left: 1px solid #dcdcdc;
+      border-right: 0px;
+      padding: 0px;
+      text-shadow: none;
+      overflow: auto;
+  }
+  
+.dialog-icon {
+    position:relative;
+	float:left;
+	margin-left:12px;
+	margin-top:16px;
+	margin-right:12px;
+	text-align:center;
+	text-shadow:none;
+	overflow:hidden;
+	width:33px;
+	height:33px;
+}
+
+.dialog-icon-c {
+	float:left;
+	margin-left:4px;
+	padding:4px 4px 4px 2px;
+	text-align:center;
+	text-shadow:none;
+	overflow:hidden;
+	width:33px;
+	height:33px;
+}
+
+div.dialog-icon#questionicon {
+	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAACSElEQVR4Ae3WzUtUURzGca9zZ+jVAac2AW2iTUIIRkUwQdFsitKCxEzaGO2DQgiIyIpiMuovqAgoapWUGGBNDJQTRBHEICQV4rw0AZmijqWnL3CAS8zPc87FgMALn9U9z8OjwwynzvVZftLpdD0asAfXkUUJVczhG17hBlKII7KUAxpxAh+gLOVxEoml+Ot3YgAqpCEk4YcZEMERfIYSzKCIcUxBCcZwHFGXAZ4eUBZKp/AM59Cuz57BE0wIme/ogm87ogWjQlkF59FQI7dCjykI2a9IwjMNWINBoWQeFxANnN+CrX91nMYvoeMFEqaPoRNKMIzN+mwc1/AaOdxCo363AUNQgm740ogo3kMJegNnezAPFXBJv/Nx1vD1XSuNSEIt4i4Oow35WuWBrk5D1z5pRNoQnERZ+13jfSbQdcrQ1SeNyEKF9AO7dc863DOcz0ojyiEHTGI/PN3TgTlDpiyNkIOyGRwMDDiAnxa5qjSiCuWoJzBgLyYsc7PSiKLjgAoSOrseow7ZojQi4zjiAWI62+6YzUgjLjsW3cEmbMRNx+xVacQOLDgUfcEAnoofhSwpjfCRg/rH3mG1NMJDm0NZCW+QQ8Ehd2zR+ycvV+KRZdl9bEMzbltm+hG3udQ04SOUQV8g0wtlMKJHe7a3qxTGDKWD6EIH+k2/C2hFvetNO4U8lGAaFW0aSvAJhxAJc+P20ISHUCE9RrPwH3AaswqtGLb8HVnAWxwVvoqhh3iIYTsu4jkKmEUVJbzEFexCDF7d8vO/PX8AAbNOe/yi6WoAAAAASUVORK5CYII=') 0px 0px no-repeat;
+}
+
+div.dialog-icon#informationicon {
+	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAABrklEQVR42u3X0StDYRiAcWc7WxiU/RluVgRqStktUgrkhr+ESA5Kce1GKa6skhtMK9kKmiRFkrLBtUzl8yiVm2++9zidUvvqd/m+PbN2zqeifKTHcZwA6tCFeaRRQBHveMIhFpFAPYJeBjRgDDkoQ5eYQNSLT9+GbSiXdhGH7SYgiH7cQv3RPUYQkgRY6McjlEdeMArbNKIJN1Aeu0Mc1m8BNdgxXFpAFhk8GM7sI/rb1zAMZWgdzYhhVTA3DlsXEcKZYNnCj9kp4c+3VhcRhxLYwSgGkRTOdusiHOGiVzx/exXOLugi0lA+SWsixM+FEyzi62SFs4+6iHfhohVEEHLxVRZ1EUXhomVUIoA54eybLiLvY0ReF5HyMSKli5j2MWJWF9GKD58i4roIGxnBoqUfszOCuVNESr3A+gTLNtGJdqwJ5oYQLPUmrcKm4KJyjhyeDGeSqDe51DTiAspjV2iGZXq7SuDew4A8ehGQ3rQTuPQg4Bo9CLq5cVtoxMYfArYQ0/wFRDHV6MWR4XPkA8cYQMTL/8IshNGCSezhAW8oooADzKADYVgV5fPfzidwZJlrWe81pQAAAABJRU5ErkJggg==') 0px 0px no-repeat;
+}
+
+div.dialog-icon#exclamationicon {
+	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAABk0lEQVR42u3WAUQDYRiA4dYyU4NSQitEIlBphEqjQgoaUJEALAmIMKSIBYQwQEgkEJKwgFKDgJWsqlKpqEyp1deLw5nb9rfdbrCPB9z/ndfh7kqKY8YEg0E3JtFUqIBSjOIbM7AXIqIBYQiO0GJ1gB1+iE4ADisjmnCWFHEJj1UBNixDDITgtCKiA68pIuLogy3fT2EbkkYY5fmMGEECksFEvgIqcAJREENVPiLmkIAoWjI7oBEXEJ0HTMANH2JJ15/RYmZECL8QnTsMate7cAZJsmlWgBfXEIOIIe1MT4qIFwznGuDAFiSrCGAfzlwixvEIMXCLAe1cJ05TnHvFVLYBNdiFpPCEWXRjCjdpzh6jLpt/hWl8QEzwhXnY/xPRjAjERFF4VAOcCCjc9B0bWMQaXhR2VuBS/UpeKdzwBl5tpx1RhZ179GcKcGEVohjRq+21KUUA66jO9GJ6gyj4RAQ7OERccS8OX7qv5B7EAgeoNfpZGUPCoogf+FGmj6jEOcRCd6jXR7RiwWJL8JQUpzgG8weSbW5fNkrC0QAAAABJRU5ErkJggg==') 0px 0px no-repeat;
+}
+
+div.dialog-icon#criticalicon {
+	background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAADAklEQVR4Ae3Xy2ucZRQH4MwkmTbNxSJxU6Vab92EomKlRa0IYreNWoHaWkAVRAFBjKBKYr0T1b9AuhKsZGUCqkBNNViCkEobpAq2aTDmJqGJzaST1ByfwAcMw3xmctkIPfCsznuG33yXed+pulorrc7OzixNPMhS9TFGgXkm+JFPeJhrqF7PANdymDNEhc7yDM3r8e138zVRZIYhBjnFAGc4zzRR5Dh7qFlNgGr2M0QkxvmKF7mTuqL1G9jB8/QwSiRGOERuJQEyPMYkwSJ9HCBT4Wfs5zuuEExxiJpKQ9zNeYICn3HbKq7mVj5ljmCYPWSWG2zkW4IFPmfLGp6r6zjKAkEvzcvdhieIxE/cug5v142cIBJPU5O2uJbTBFMcLLPmJp6koUwvx2FuKdN7lDGCszSmhbifSHxPXUl/G18wyVLVlvTfYpJutpf0NtJDJB5KC7FUwSxtZfqtTBLk+ZBs0nubWYKZlKv4AtMEH6WF6CMYZ2eZfgMvM01wmY/5gDmCWdppLDN/B0MEP6SFGCe4QEPac8MrzBDMJ4I8HeRSZusYJBhPCzFPcK6Cn/M3yBOJAu+SXWb2FEGhKqnSgaCSqmEDGYorRy2VVKSlHCUYpillzSaOkCfIJ4J5lqo+ZbaeQYLRtBC9BBPsTtnS3yRPcIkOXmWGoMBSNadsBxcIetNCvEOQ5/WUV3SKYIb2ol4bFwkupbyiL/E3wftpIXaxSHCSxpL+DRzlD9rJlvTbGOEY28rcim+IxANpIWroJ5jm2TJrttDKxpQzyCNsLdM7yF8EP9OQuoHRSiRO07IOG9h2+onEAar/a6COLoJ/+JKb1xDgeo5xhaCHzZUMtvALwQLd7FhFgNvpokDwGztX8gF7GSm5Nc+Rq/CA/BQDLBKM00p2pSftvfxKJC5ykg7uY3PR+iZ28Rp9TBGJ39m32hN3hha6iCJzTDDMucQwE+SJIt3cRXatT/cm9tHPIrGMRQZ4nPr1/BeWIcc9HOE4f3KZAmOc4D3uJUem6v9WV+tfvgXi4yRYDJ8AAAAASUVORK5CYII=') 0px 0px no-repeat;
+}
+  
+.dialog-text {
+      padding: 16px 24px 16px 24px;
+      margin-right: 0px;
+      color: #4c4c4c;
+      text-shadow:none;
+      overflow: auto;
+  }
+.dialog-itext {
+      padding: 16px 16px 16px 0px;
+      margin-right: 0px;
+      color: #4c4c4c;
+      overflow:hidden;
+  }
+.dialog-buttonbar {
+      background: white;
+      border-radius: 0px;
+      border-bottom: 0px;
+      border-left: 0px;
+      border-right: 0px;
+      padding: 0px;
+      padding-left: 0px;
+      height: 52px;
+  }
+.dialog-buttonNoBorder {
+      background: white;	
+      border: 0px solid #dcdcdc; /* a visible border alternative is: 1px solid #dcdcdc; */
+      border-radius: 0px;
+      border-width: 1px 0px 0px 1px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #007AFF;
+      height: 52px;
+      margin: 0px;
+      width: 282px;
+      padding: 0px;
+      text-align: center;
+  }
+
+input#_nsbDialogBoxInput, input:hover#_nsbDialogBoxInput, input:focus#_nsbDialogBoxInput, input:active#_nsbDialogBoxInput {
+	margin-top:15px;
+	margin-left:5px;
+	margin-bottom:5px;
+	font-family:helvetica,verdana,arial;
+	font-size:18px;
+	border:1px solid #ddd;
+	background:#ffffff;
+	color:#7d7d7e;
+	font-weight:600;
+	outline:none;
+	width:260px;
+}
+
+.clearfix:after {
+    content:"."; 
+    display:block; 
+    height:0; 
+    clear:both; 
+    visibility:hidden;
+}
+
+.clearfix {
+    display:inline-block;
+}
+ 
+ /* mac hide \*/
+    * html .clearfix {height:1%;}
+      .clearfix {display:block;}
+ /* End hide */
+ 
+ #NSB_Progress {
+	background-clip:padding-box;
+	background-image:gradient(linear,0 0,0 100%,color-stop(0,#fff),color-stop(0.02,#eee),color-stop(0.98,#ccc),color-stop(1,#a3a3a3));
+	background-image:linear-gradient(to bottom,#fff 0%,#eee 2%,#ccc 98%,#a3a3a3 100%);
+	background: #ddd;
+	border-radius:8px;
+	border:1px solid #505050;
+	box-shadow:0 0 4px rgba(0,0,0,0.5);
+	box-sizing:border-box;
+	color:#333;
+	font-family:helvetica;
+	font-size:15px;
+	line-height:130%;
+	overflow: hidden;
+	padding:12px 14px;
+	text-align:left;
+	text-shadow:0 1px 0 rgba(255,255,255,0.75);
+	user-select:none;
+	width:240px;
+	z-index:9999;
+    height:45px;
+    left:55px;
+    position:absolute;
+}
+
+#NSB_Progress .NSB_ProgressClose {
+	background:rgba(128,128,128,0.12);
+	border-radius:9px;
+	box-shadow:0 1px 0 #fff;
+	box-sizing:border-box;
+	color:#707070;
+	font-size:16px;
+	height:18px; line-height:14px;
+	position:absolute;
+	right:4px;
+	text-align:center;
+	text-indent:1px;
+	top:4px;
+	width:18px;
+}
+
+.NSB_Grid{ border-top:1px solid #9bb3cd;border-left:1px solid #9bb3cd;margin-bottom:4em;border-collapse:collapse;}
+  .NSB_Grid th{padding:.2em .2em .2em .2em;background:#93A5BB;text-shadow:none;color:#fff;border:2px ridge #9bb3cd;}
+  .NSB_Grid th p{font-weight:bold;margin-bottom:.33em;}
+  .NSB_Grid td{vertical-align:middle;text-shadow:none;border:2px ridge #9bb3cd;}
+  .NSB_Grid td p{margin-bottom:0;}
+  .NSB_Grid td p+p{margin-top:.417em;}
+  .NSB_Grid td p+p+p{margin-top:.417em;}
+
+.nsb-form.modal {padding: 0px;}
+
+div.container-center {
+    display: flex; 
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+}
+
+/*
+  CSS for SnackBar - Source: https://codepen.io/wibblymat/pen/avAjq
+*/
+
+.paper-snackbar {
+  transition-property: opacity, bottom, left, right, width, margin, border-radius;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  font-family: Helvetica;
+  font-size: 14px;
+  min-height: 14px;
+  background-color: #323232;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  line-height: 22px;
+  padding: 18px 24px;
+  bottom: 0px;
+  opacity: 0;
+}
+
+@media (min-width: 640px) {
+  .paper-snackbar {
+    /*
+    Desktop:
+      Single-line snackbar height: 48 dp tall
+      Minimum width: 288 dp
+      Maximum width: 568 dp
+      2 dp rounded corner
+      Text: Helvetica Regular 14 sp
+      Action button: Helvetica Medium 14 sp, all-caps text
+      Default background fill: #323232 100%
+    */
+
+    min-width: 288px;
+    max-width: 568px;
+    display: inline-flex;
+    border-radius: 2px;
+    margin: 24px;
+    bottom: -100px; 
+  }
+}
+
+@media (max-width: 640px) {
+  .paper-snackbar {
+  /*
+  Mobile:
+    Single-line snackbar height: 48 dp
+    Multi-line snackbar height: 80 dp
+    Text: Helvetica Regular 14 sp
+    Action button: Helvetica Medium 14 sp, all-caps text
+    Default background fill: #323232 100%  
+  */
+    left: 0px;
+    right: 0px;
+  }
+}
+
+.paper-snackbar .action {
+  background: inherit;
+  display: inline-block;
+  border: none;
+  font-size: inherit;
+  text-transform: uppercase;
+  color: #ffeb3b;
+  margin: 0px 0px 0px 24px;
+  padding: 0px;
+  min-width: min-content;
+}
+
+.bs4-control-label {display:inline-block; max-width:100%; margin-bottom:5px; font-weight:700;}
+
+.bs4-help-block {display:block; margin-top:5px; margin-bottom:10px; color:#737373;}

@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang=en>
+<head>
+<meta charset="utf-8">
+<title>Project13</title>
+<meta name="generator" content="NSB/AppStudio 8.1.0b3$bwkg" />
+<meta name='date' content='2020-05-01 05:50:36.250566' />
+<meta name='Description' content='My great app!' />
+<meta name='version' content='1.0.2' />
+<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no viewport-fit=cover' />
+<meta name='theme-color' content='#000000' />
+<meta name='mobile-web-app-capable' content='yes' />
+<meta name='apple-mobile-web-app-status-bar-style' content='black-translucent' />
+<meta name='apple-mobile-web-app-title' content='' />
+<meta name='copyright' content='copyright 2020 ABC Company' />
+<link rel='apple-touch-icon' href='nsb/images/192.png' />
+<link rel='shortcut icon' href='nsb/images/192.png' />
+<link href='manifest.json' rel='manifest' />
+<link href="toolbox/as/dist/asStyle.css" rel="stylesheet">
+<script src="nsb/library/jquery3.js"></script>
+<link href="nsb/library/jquery.modal.min.css" rel="stylesheet">
+<script src="nsb/library/jquery.modal.min.js"></script>
+<script src="nsb/library/appstudioFunctions.js"></script>
+<script src="nsb/library/basicFunctions.js"></script>
+<link href="toolbox/bs4/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="toolbox/bs4/dist/open-iconic/css/open-iconic-bootstrap.min.css" rel="stylesheet">
+<script src="toolbox/bs4/dist/js/bootstrap.bundle.min.js"></script>
+<script src="toolbox/bs4/dist/bsFunctions.min.js"></script>
+
+<script src="cordova.js"></script>
+
+<style type="text/css">
+
+#Form1 {background:inherit;}
+#Button1 {position:absolute; left:93px; top:138px;}
+</style>
+<style>
+ .dialog-buttonbar {
+ border-bottom-right-radius: 15px;
+ border-bottom-left-radius: 15px;
+ }
+ 
+  .dialog-buttonNoBorder:first-child {
+ border-bottom-left-radius: 15px;
+ }
+ 
+  .dialog-buttonNoBorder:last-child {
+ border-bottom-right-radius: 15px;
+ }
+ 
+ .dialog-header {
+ border-top-right-radius: 15px;
+ border-top-left-radius: 15px;
+ border-bottom: solid lightgrey 1px;
+ text-align: center;
+ }
+
+
+
+</style>
+
+</head>
+<body style="margin:0px;-ms-touch-action:none;font-family:-apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue';">
+<noscript><h1>JavaScript must be enabled!</h1></noscript>
+<div data-role="page" id="NSBPage" data-theme="a" style="position:absolute; width:100%; height:100%; background-color:inherit; ">
+<a name='/Form1' data-role=none></a>
+<div id="Form1"  class="nsb-form " style="display:none;  position:absolute;  height: 100vh; top:0px; left:0px; width:100%; ">
+<script>
+Form1.innerHTML=["",
+    "<button id='Button1' data-role='none' class='btn btn-secondary btn-md ' style='font-family:inherit;' data-i18n='Button'><span id='Button1_icon' class=''></span>Button<span id=Button1_badge class=\"badge badge-info\" style=\"margin-left:1ch;\"></span></button>",
+  ].join('');
+</script>
+</div>
+</div>
+<script>
+if(!navigator.cookieEnabled) NSB.MsgBox('Please turn cookies on.');
+(function(){var all=document.getElementsByTagName('*');for(var i=0;i<all.length;i++)if(all[i].id!=''&&typeof all[i].id!='undefined'&&typeof window[all[i].id]=='undefined')window[all[i].id]=all[i];})()
+var NSB = NSB || {};
+NSB.currentForm = Form1;
+NSB.stopOnError = true;
+NSB.enableBrowserArrows = false;
+NSB.enableAppScroll = false;
+NSB.id = 'Project13';
+NSB.initLanguage();
+NSB.voltAppId = '34CByD';
+NSB.voltDashboardAccess = False;
+NSB.voltDomain = '';
+NSB.PWA = true;
+if ($.mobile != undefined) $.mobile.hashListeningEnabled = false;
+
+// ***** Code for form: Form1 *****
+window.addEventListener('load', function() {
+  Form1.style.display = 'block';
+  NSB.addProperties(Form1);
+  NSB.bs.addProperties(Button1, 'Button_bs4');
+  Form1.style.display = 'none';
+}, false);
+
+
+window.addEventListener('orientationchange', function(){window.scrollTo(0,0)});
+window.addEventListener('load', function() {
+  if (typeof($().i18n) === 'function') $('[data-i18n]').i18n();
+  if (window.$volt) $volt.init('34CByD', NSB.voltDomain);
+  browserWarningMessage('Please use Google Chrome, Apple Safari or another supported browser.');
+  Form1.style.display = 'block';
+  Main();
+  if (typeof(Form1.onshow)=='function') Form1.onshow();
+}, false);
+</script>
+<script src="code.js"></script>
+
+</body>
+</html>
