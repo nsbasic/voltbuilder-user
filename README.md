@@ -2,11 +2,11 @@
 
 **Who is NSB Corporation?**
 
-We started in 1993 at the introduction of the Newton, when we observed the need for easier to use development tools. Our first product, NS Basic/Newton, was an immediate success. When the Newton was cancelled, we introduced our next product: NS Basic/Palm. It also sold well. A while after, we added NS Basic/CE. 
+We started in 1993 at the introduction of the Newton to fill the need for easier to use development tools. Our first product, NS Basic/Newton, was a success. When the Newton was cancelled, we introduced NS Basic/Palm. It also did well, so we added NS Basic/CE. 
 
-In 2010, we realized that the speed of JavaScript on mobile devices was beginning to get serious. Web pages in those days used a bit of JavaScript to augment the page: Could we flip things around and make JavaScript the core of web pages, driving the HTML and CSS? That resulted in AppStudio, which targeted iOS and Android. AppStudio now has thousands of users in over 80 countries. In addition, more than 2 million students have learned how to program using it.
+In 2010, we realized that JavaScript on mobile devices was getting fast. Web pages in those days used a bit of JavaScript to augment the page: Could we flip things around and make JavaScript the core of web pages, driving the HTML and CSS? That resulted in AppStudio, targeting iOS and Android. It now has thousands of users in over 80 countries. More than 2 million students have learned how to program using it.
 
-The [same core group of developers](https://www.nsbasic.com/app/team/) has been at work on AppStudio for many years. We enjoy what we’re doing - we’ve built up a [loyal base of customers](https://www.nsbasic.com/app/kudos/) by treating them fairly and providing great support.
+The [same core group of developers](https://www.nsbasic.com/app/team/) has been at work on AppStudio for many years. We enjoy what we’re doing - we’ve built a [loyal base of customers](https://www.nsbasic.com/app/kudos/) by treating them fairly and providing great support.
 
 **What is VoltBuilder?**
 
@@ -60,9 +60,9 @@ Project Root
     └-- android.keystore
 ```
 
-certificates: This is a folder which holds your certificates. Here is a sample:
+certificates: This folder holds your certificates.
 
-voltbuilder.json: This is a file which contains information about the build. Here’s how it looks: copy and paste this into a file named voltbuilder.json and customize it for your configuration.
+voltbuilder.json: This file which information about the build. Here’s how it looks: copy and paste this into a file named voltbuilder.json and customize it for your configuration.
 
 ```
 {
