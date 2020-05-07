@@ -37,7 +37,7 @@ The PhoneGap Legacy project format is not supported.
 
 **How do I use it?**
 
-VoltBuilder works by uploading a single folder with everything in it. The folder contents are the same as for PhoneGap, with two additional items:
+VoltBuilder works by uploading a single folder with everything in it. The folder contents are the same as Cordova, with two additional items:
 ```
 Project Root
 ├-- config.xml
