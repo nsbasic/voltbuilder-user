@@ -51,7 +51,7 @@ Project Root
 │   ├-- android
 │   └-- ios
 ├-- voltbuilder.js
-├-- www
+└-- www
     ├-- css
     ├-- images
     ├-- index.html
