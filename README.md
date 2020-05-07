@@ -62,7 +62,7 @@ Project Root
 
 certificates: This folder holds your certificates.
 
-voltbuilder.json: This file which information about the build. Here’s how it looks: copy and paste this into a file named voltbuilder.json and customize it for your configuration.
+voltbuilder.json: This file has information about the build. Copy and paste this into a file named voltbuilder.json and customize it for your configuration.
 
 ```
 {
@@ -88,5 +88,5 @@ voltbuilder.json: This file which information about the build. Here’s how it l
 *   `iosPackageType` can be `ad-hoc`, `app-store` or `enterprise`
 *   `platform` can be `ios` or `android`
 *   `release` can be `debug` or `release`
-*   `serial` identified you to VoltBuilder. We will be giving you a serial number for beta testing.
+*   `serial` identifies you to VoltBuilder. We will be giving you a serial number for beta testing.
 *   The test server does not support HTTPS yet. You will not be able to download .ipa files directly to iOS devices. If you save them to your own https enabled server, they should work.
