@@ -10,7 +10,7 @@ The [same core group of developers](https://www.nsbasic.com/app/team/) has been 
 
 **What is VoltBuilder?**
 
-We’ve encouraged our customers to use PhoneGap Build since long before they became part of Adobe. One by one, the friends we made when they were Nitobi drifted away and PhoneGap itself withered. We realized our customers were going to have a big problem unless something was done.
+We’ve encouraged our customers to use PhoneGap Build long before they became part of Adobe. One by one, the friends we made when they were Nitobi drifted away and PhoneGap itself withered. We realized our customers were going to have a big problem unless something was done.
 
 Initially, we thought of VoltBuilder as a solution for our AppStudio customers. But when we designed it, we realized that others would need it as well.
 
@@ -61,9 +61,9 @@ Project Root
     └-- android.keystore
 ```
 
-certificates: This folder holds your certificates.
+certificates: This folder holds your certificates. If you're only building for Android, you do not to supply mobileprovision or p12 files. If you are only making a debug build for Android, you don't even need a keystore file.
 
-voltbuilder.json: This file has information about the build. Copy and paste this into a file named voltbuilder.json and customize it for your configuration.
+voltbuilder.json: This file has information about the build. Copy and paste this into a file named voltbuilder.json and customize it for your configuration. If you're only building for Android, you can leave the ios fields empty.
 
 ```
 {
