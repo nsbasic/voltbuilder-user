@@ -93,4 +93,5 @@ voltbuilder.json: This file has information about the build. Copy and paste this
 
 **Things which could go wrong**
 
-# Make sure your index.htm (or other file) does not include phonegap.js. Voltbuilder will include cordova.js automatically.
+1. Make sure your index.htm (or other file) does not include phonegap.js. Voltbuilder will include cordova.js automatically.
+1. In config.xml, PhoneGap style <config-edit clauses [were made obsolete a while ago](http://docs.phonegap.com/phonegap-build/configuring/config-file-element/). Replace them with <edit-config
