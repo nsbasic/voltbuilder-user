@@ -90,3 +90,7 @@ voltbuilder.json: This file has information about the build. Copy and paste this
 *   `release` can be `debug` or `release`
 *   `serial` identifies you to VoltBuilder. We will be giving you a serial number for beta testing.
 *   The test server does not support HTTPS yet. You will not be able to download .ipa files directly to iOS devices. If you save them to your own https enabled server, they should work.
+
+**Things which could go wrong**
+
+# Make sure your index.htm (or other file) does not include phonegap.js. Voltbuilder will include cordova.js automatically.
