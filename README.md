@@ -51,7 +51,7 @@ Project Root
 ├-- merges
 │   ├-- android
 │   └-- ios
-├-- voltbuilder.js
+├-- voltbuilder.json
 └-- www
     ├-- css
     ├-- images
