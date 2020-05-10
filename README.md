@@ -57,7 +57,6 @@ Project Root
     ├-- images
     ├-- index.html
     ├-- js
-    ├-- android.keystore
     └-- android.keystore
 ```
 
