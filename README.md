@@ -56,8 +56,7 @@ Project Root
     ├-- css
     ├-- images
     ├-- index.html
-    ├-- js
-    └-- android.keystore
+    └-- js
 ```
 
 certificates: This folder holds your certificates. If you're only building for Android, you do not to supply mobileprovision or p12 files. If you are only making a debug build for Android, you don't even need a keystore file.
