@@ -48,7 +48,7 @@ Project Root
 │   ├-- distribution.mobileprovision
 │   ├-- ios_development.p12
 │   └-- ios_distribution.p12
-├-- merges
+├-- merges (optional)
 │   ├-- android
 │   └-- ios
 ├-- voltbuilder.json
