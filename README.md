@@ -67,6 +67,7 @@ voltbuilder.json: This file has information about the build. Copy and paste this
 {
     "androidAlias": "key0",
     "androidAliasPassword": "mypassword",
+    "androidDname": "cn=myname, ou=mygroup, o=mycompany, c=mycountry",
     "androidKeystore": "certificates/android.keystore",
     "androidKeystorePassword": "mypassword",
     "iosDevP12": "certificates/ios_development.p12",
@@ -84,14 +85,15 @@ voltbuilder.json: This file has information about the build. Copy and paste this
 
 **Notes**:
 
-*   `iosPackageType` can be `ad-hoc`, `app-store` or `enterprise`
-*   `platform` can be `ios` or `android`
-*   `release` can be `debug` or `release`
-*   `serial` identifies you to VoltBuilder. We will be giving you a serial number for beta testing.
+*   `androidDname` Optional. If there is no keystore defined, a keystore file will be automatically generated for Android Release builds. Use this field to customize the values. A fresh keystore is generated with each build.
+*   `iosPackageType` iOS Release only. Can be `ad-hoc`, `app-store` or `enterprise`.
+*   `platform` Required. Can be `ios` or `android`.
+*   `release` Required. Can be `debug` or `release`.
+*   `serial` Required. Identifies you to VoltBuilder. We will be giving you a serial number for beta testing.
 *   The test server does not support HTTPS yet. You will not be able to download .ipa files directly to iOS devices. If you save them to your own https enabled server, they should work.
 
 **Things which could go wrong**
 
 1. Make sure your index.htm (or other file) does not include phonegap.js. Voltbuilder will include cordova.js automatically.
-1. In config.xml, PhoneGap style <config-edit clauses [were made obsolete a while ago](http://docs.phonegap.com/phonegap-build/configuring/config-file-element/). Replace them with <edit-config.
+1. In config.xml, PhoneGap style `<config-edit` clauses [were made obsolete a while ago](http://docs.phonegap.com/phonegap-build/configuring/config-file-element/). Replace them with `<edit-config`.
 1. We're using the latest Cordava tooling. Many plugins and usages will need to be updated: users were held back by PhoneGap not being up to date. If you run into issues, tha's one of the first things to consider.
