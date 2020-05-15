@@ -112,11 +112,6 @@ This file has information about the build. Copy and paste this into a file named
 
 **Notes**:
 
-*   `androidDname` Optional. If there is no keystore defined, a keystore file will be automatically generated for Android Release builds. Use this field to customize the values. A fresh keystore is generated with each build.
-*   `iosPackageType` iOS Release only. Can be `ad-hoc`, `app-store` or `enterprise`.
-*   `platform` Required. Can be `ios` or `android`.
-*   `release` Required. Can be `debug` or `release`.
-*   `serial` Required. Identifies you to VoltBuilder. We will be giving you a serial number for beta testing.
 *   The test server does not support HTTPS yet. You will not be able to download .ipa files directly to iOS devices. If you save them to your own https enabled server, they should work.
 
 **Things which could go wrong**
