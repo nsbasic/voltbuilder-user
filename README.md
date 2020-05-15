@@ -61,8 +61,14 @@ Project Root
 
 certificates: This folder holds your certificates. If you're only building for Android, you do not to supply mobileprovision or p12 files. If you are only making a debug build for Android, you don't even need a keystore file.
 
-voltbuilder.json: This file has information about the build. Copy and paste this into a file named voltbuilder.json and customize it for your configuration. If you're only building for Android, you can leave the ios fields empty.
+# voltbuilder.json
+This file has information about the build. Copy and paste this into a file named voltbuilder.json and customize it for your configuration. If you're only building for Android, you can leave the ios fields empty.
 
+
+Attributes <br/> <span class="sub-header">Only for platform:</span> | Description
+---------------- | ------------
+
+androidAlias | *Required* <br/> The alias name specified when creating the keystore. Usually key0.
 ```
 {
     "androidAlias": "key0",
