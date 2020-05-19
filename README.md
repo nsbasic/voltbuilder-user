@@ -120,4 +120,3 @@ This file has information about the build. Copy and paste this into a file named
 1. In config.xml, PhoneGap style `<config-edit` clauses [were made obsolete a while ago](http://docs.phonegap.com/phonegap-build/configuring/config-file-element/). Replace them with `<edit-config`.
 1. We're using the latest Cordava tooling. Many plugins and usages will need to be updated: users were held back by PhoneGap not being up to date. If you run into issues, that's one of the first things to consider.
 1. To use phonegap-plugin-push: `<plugin name="phonegap-plugin-push" source="npm">`
-1. The plugin `cordova-plugin-x-socialsharing` is no longer supported by its author. It has to be removed.
