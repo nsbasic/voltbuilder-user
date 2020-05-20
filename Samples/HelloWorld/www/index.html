@@ -2,11 +2,11 @@
 <html lang=en>
 <head>
 <meta charset="utf-8">
-<title>Project13</title>
-<meta name="generator" content="NSB/AppStudio 8.1.0b3$bwkg" />
-<meta name='date' content='2020-05-01 05:50:36.250566' />
-<meta name='Description' content='My great app!' />
-<meta name='version' content='1.0.2' />
+<title>HelloWorld</title>
+<meta name="generator" content="NSB/AppStudio 8.1.0.1$bwkg" />
+<meta name='date' content='2020-05-19 10:53:39.348756' />
+<meta name='Description' content='HelloWorld' />
+<meta name='version' content='1.0.0' />
 <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no viewport-fit=cover' />
 <meta name='theme-color' content='#000000' />
 <meta name='mobile-web-app-capable' content='yes' />
@@ -32,31 +32,7 @@
 <style type="text/css">
 
 #Form1 {background:inherit;}
-#Button1 {position:absolute; left:93px; top:138px;}
-</style>
-<style>
- .dialog-buttonbar {
- border-bottom-right-radius: 15px;
- border-bottom-left-radius: 15px;
- }
- 
-  .dialog-buttonNoBorder:first-child {
- border-bottom-left-radius: 15px;
- }
- 
-  .dialog-buttonNoBorder:last-child {
- border-bottom-right-radius: 15px;
- }
- 
- .dialog-header {
- border-top-right-radius: 15px;
- border-top-left-radius: 15px;
- border-bottom: solid lightgrey 1px;
- text-align: center;
- }
-
-
-
+#Button1 {position:absolute; left:99px; top:148px;}
 </style>
 
 </head>
@@ -80,9 +56,9 @@ NSB.currentForm = Form1;
 NSB.stopOnError = true;
 NSB.enableBrowserArrows = false;
 NSB.enableAppScroll = false;
-NSB.id = 'Project13';
+NSB.id = 'HelloWorld';
 NSB.initLanguage();
-NSB.voltAppId = '34CByD';
+NSB.voltAppId = '';
 NSB.voltDashboardAccess = False;
 NSB.voltDomain = '';
 NSB.PWA = true;
@@ -100,7 +76,6 @@ window.addEventListener('load', function() {
 window.addEventListener('orientationchange', function(){window.scrollTo(0,0)});
 window.addEventListener('load', function() {
   if (typeof($().i18n) === 'function') $('[data-i18n]').i18n();
-  if (window.$volt) $volt.init('34CByD', NSB.voltDomain);
   browserWarningMessage('Please use Google Chrome, Apple Safari or another supported browser.');
   Form1.style.display = 'block';
   Main();

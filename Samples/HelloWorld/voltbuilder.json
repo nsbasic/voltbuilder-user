@@ -1,16 +1,19 @@
 {
   "androidAlias": "key0",
-  "androidAliasPassword": "mypassword",
+  "androidAliasPassword": "xxxxxxxx",
+  "androidDname": "cn=myname, ou=mygroup, o=mycompany, c=mycountry",
   "androidKeystore": "certificates/android.keystore",
-  "androidKeystorePassword": "mypassword",
+  "androidKeystorePassword": "xxxxxxxx",
+  "client": "AppStudio",
+  "clientVersion": "8.1.0.1",
   "iosDevP12": "certificates/ios_development.p12",
   "iosDevP12Password": "xxxxxxxx",
   "iosDevelopment": "certificates/development.mobileprovision",
   "iosDistP12": "certificates/ios_distribution.p12",
-  "iosDistP12Password": "xxxxxxxx",
+  "iosDistP12Password": "mypassword",
   "iosDistribution": "certificates/distribution.mobileprovision",
   "iosPackageType": "app-store",
-  "platform": "ios",
+  "platform": "android",
   "release": "debug",
-  "serial": "XXX-XXX-XXX"
+  "serial": "W77-415-71B"
 }

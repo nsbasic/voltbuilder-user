@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="244" id="com.nsbasic.Project11" ios-CFBundleVersion="244" version="1.0.2" xmlns="https://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Project11</name>
-    <description>My great app!</description>
+<widget android-versionCode="1" id="com.nsbasic.HelloWorld" ios-CFBundleVersion="1" version="1.0.0" xmlns="https://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>HelloWorld</name>
+    <description />
     <preference name="phonegap-version" value="cli-9.0.0" />
     <icon src="nsb/images/192.png" />
     <preference name="SplashScreenDelay" value="2000" />
@@ -20,22 +20,7 @@
     <allow-navigation href="*" />
     <access origin="*" />
     <allow-intent href="*" />
-    <plugin name="cordova-custom-config" version="*" />
-    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-        <string>need location access to find things nearby</string>
-    </edit-config>
-    <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysAndWhenInUseUsageDescription">
-        <string>need location access to find things nearby</string>
-    </edit-config>
-    <edit-config file="*-Info.plist" mode="merge" target="NSLocationAlwaysUsageDescription">
-        <string>need location access to find things nearby</string>
-    </edit-config>
-    <plugin name="cordova-plugin-geolocation" version="2.1.0" />
     <plugin name="cordova-plugin-wkwebview-engine" source="npm" />
-    <plugin name="cordova-launch-review" source="npm" />
-    <plugin name="cordova-plugin-admob-free" spec="0.24.0">
-	    <variable name="ADMOB_APP_ID" value="ca-app-pub-9175211273246180~3309800386"/>
-    </plugin>
     <platform name="ios">
         <preference name="WKWebViewOnly" value="true" />
         <feature name="CDVWKWebViewEngine">
