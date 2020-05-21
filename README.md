@@ -129,4 +129,17 @@ This file has information about the build. Copy and paste this into a file named
 </config-file>
 ```
 Cordova then started used config-file [for its plugins](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#config-file), which conflicted with the PhoneGap implementation. PhoneGap then changed to use [Cordova's edit-config](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config). You'll need to change these in your config.xml. Consult the documentation for the affected controls for the details.
+1. UIWebView Deprecated. Use WKWebview. You will get this message if your config.xml file includes the UIWebView plugin. Remove it, and replace with this:
+```
+<platform name="ios">
+    <preference name="WKWebViewOnly" value="true" />
+
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+</platform>
+```
+There is more information in the [Cordova docs](https://cordova.apache.org/howto/2020/03/18/wkwebviewonly.html).
 
