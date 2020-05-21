@@ -120,7 +120,7 @@ This file has information about the build. Copy and paste this into a file named
 1. Make sure your index.htm (or other file) does not include phonegap.js. Voltbuilder will include cordova.js automatically.
 1. In config.xml, PhoneGap style `<config-edit` clauses [were made obsolete a while ago](http://docs.phonegap.com/phonegap-build/configuring/config-file-element/). Replace them with `<edit-config`.
 1. We're using the latest Cordava tooling. Many plugins and usages will need to be updated: users were held back by PhoneGap not being up to date. If you run into issues, that's one of the first things to consider.
-1. If your Cordova project contains plugins/libraries, such as cordova-plugin-x-socialsharing, which reference both the Android Support Library and AndroidX, your Android build will fail because the two cannot live side-by-side in an Android build. This plugin will help: cordova-plugin-androidx-adapter. 
+1. If your Cordova project contains plugins/libraries, such as `cordova-plugin-x-socialsharing`, which reference both the Android Support Library and AndroidX, your Android build will fail because the two cannot live side-by-side in an Android build. This plugin will help: `cordova-plugin-androidx-adapter`. 
 1. To use phonegap-plugin-push: `<plugin name="phonegap-plugin-push" source="npm">`
 1. If you get this message "Your config.xml file has obsolete PhoneGap config-xml lines in it.", you'll need to make some changes. Up to cli-7.0.1, PhoneGap allowed this type of clause:
 ```
