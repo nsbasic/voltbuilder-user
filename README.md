@@ -122,4 +122,11 @@ This file has information about the build. Copy and paste this into a file named
 1. We're using the latest Cordava tooling. Many plugins and usages will need to be updated: users were held back by PhoneGap not being up to date. If you run into issues, that's one of the first things to consider.
 1. If your Cordova project contains plugins/libraries, such as cordova-plugin-x-socialsharing, which reference both the Android Support Library and AndroidX, your Android build will fail because the two cannot live side-by-side in an Android build. This plugin will help: cordova-plugin-androidx-adapter. 
 1. To use phonegap-plugin-push: `<plugin name="phonegap-plugin-push" source="npm">`
+1. If you get this message "Your config.xml file has obsolete PhoneGap config-xml lines in it.", you'll need to make some changes. Up to cli-7.0.1, PhoneGap allowed this type of clause:
+```
+<config-file platform="ios" parent="SomeXMLElement" mode="replace">
+  <SomeXMLElement someAttribute="text" >Go Skiing</SomeXMLElement>
+</config-file>
+```
+Cordova then started used config-file [for its plugins](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#config-file), which conflicted with the PhoneGap implementation. PhoneGap then changed to use [Cordova's edit-config](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config). You'll need to change these in your config.xml. Consult the documentation for the affected controls for the details.
 
