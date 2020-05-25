@@ -113,7 +113,8 @@ This file has information about the build. Copy and paste this into a file named
 
 **Notes**:
 
-*   The test server does not support HTTPS yet. You will not be able to download .ipa files directly to iOS devices. If you save them to your own https enabled server, they should work.
+*   For Android, nothing extra needs to be installed on your system to use VoltBuilder.
+*   For iOS, you'll need [Transporter](https://apps.apple.com/ca/app/transporter/id1450874784?mt=12) (runs on MacOS) to upload your app to the iTunes Store.
 
 **Things which could go wrong**
 
@@ -129,7 +130,10 @@ This file has information about the build. Copy and paste this into a file named
 </config-file>
 ```
 Cordova then started used config-file [for its plugins](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#config-file), which conflicted with the PhoneGap implementation. PhoneGap then changed to use [Cordova's edit-config](https://cordova.apache.org/docs/en/latest/plugin_ref/spec.html#edit-config). You'll need to change these in your config.xml. Consult the documentation for the affected controls for the details.
-1. UIWebView Deprecated. Use WKWebview. You will get this message if your config.xml file includes the UIWebView plugin. Remove it, and replace with this:
+
+**UIWebView**
+
+"UIWebView Deprecated. Use WKWebview." You will get this message if your config.xml file includes the UIWebView plugin. Remove it, and replace with this:
 ```
 <platform name="ios">
     <preference name="WKWebViewOnly" value="true" />
@@ -141,5 +145,5 @@ Cordova then started used config-file [for its plugins](https://cordova.apache.o
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
 </platform>
 ```
-There is more information in the [Cordova docs](https://cordova.apache.org/howto/2020/03/18/wkwebviewonly.html).
+There is more information in the [Cordova docs](https://cordova.apache.org/howto/2020/03/18/wkwebviewonly.html). You may not actually have UIWebView in your config.xml file - but it could be used by other plugins. In that case, you'll need to update the other plugins.
 
