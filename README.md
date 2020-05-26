@@ -147,3 +147,12 @@ Cordova then started used config-file [for its plugins](https://cordova.apache.o
 ```
 There is more information in the [Cordova docs](https://cordova.apache.org/howto/2020/03/18/wkwebviewonly.html). You may not actually have UIWebView in your config.xml file - but it could be used by other plugins. In that case, you'll need to update the other plugins.
 
+**Installing to iOS**
+
+* Use the Camera app to scan the QR Code which appears after the run. Follow to prompts to install.
+* If you have a Mac connected vis USB, install [ios-deploy](https://github.com/ios-control/ios-deploy) and use this command:
+```
+ios-deploy --debug --bundle HelloWorld.ipa --no-wifi
+```
+* If you install a debug build, you can [inspect it using Safari](https://www.idownloadblog.com/2019/06/21/how-to-use-safari-web-inspector-ios-mac/), using the Develop menu.
+
