@@ -16,7 +16,7 @@ Initially, we thought of VoltBuilder as a solution for our AppStudio customers. 
 
 **What’s next?**
 
-The build service is running with a [simple front end](http://99.237.86.51:22894/upload/helper.html). Once we have feedback from users, we’ll create a fancier front end for everyone.
+The build service is running with a [simple front end](http://99.237.86.51:22894/public/helper.html). Once we have feedback from users, we’ll create a fancier front end for everyone.
 
 **VoltBuilder compared to PhoneGap Build**
 
